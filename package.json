@@ -1,0 +1,22 @@
+{
+  "name": "t3iiw1-tuesday",
+  "version": "1.0.0",
+  "description": "- MongooseJS\r   - mongosh (mongo shell)\r   - mongod (Mongo service daemon)\r   - mongos (Sharding or Clustering for MongoDB)\r   -",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
