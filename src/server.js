@@ -12,7 +12,9 @@ const app = express()
 //
 // app.verb(path, callback)
 app.get('/', (req, res) => {
-    res.send('Hello Potato World!')
+    res.json({
+        message: 'Hello World'
+    })
 })
 
 module.exports = { app }
