@@ -4,11 +4,16 @@ const mongoose = require('mongoose')
 const PostSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        minLength: 10
     },
     body: {
         type: String,
         required: true
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
 })
 
