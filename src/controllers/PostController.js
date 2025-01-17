@@ -9,9 +9,17 @@ async function createPost (title, body) {
   return post
 }
 
-async function getPost () {}
+async function getPost (query) {
+  const post = await PostModel.findOne(query)
 
-async function getPosts () {}
+  return post
+}
+
+async function getPosts (query) {
+  const posts = await PostModel.find(query)
+
+  return posts
+}
 
 async function updatePost () {}
 

@@ -15,4 +15,24 @@ async function dbConnect () {
   }
 }
 
-module.exports = { dbConnect }
+async function dbDisconnect () {
+  try {
+    await mongoose.disconnect()
+    console.log('Database disconnected successfully')
+  } catch (error) {
+    console.error('Error disconnecting from the database')
+    console.error(error)
+  }
+}
+
+async function dbDrop () {
+  try {
+    await mongoose.connection.db.dropDatabase()
+    console.log('Database dropped successfully')
+  } catch (error) {
+    console.error('Error dropping the database')
+    console.error(error)
+  }
+}
+
+module.exports = { dbConnect, dbDisconnect, dbDrop }
